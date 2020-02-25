@@ -35,7 +35,7 @@
             <property name="configLocation" value="com/yyf/mybatisPlusSpring/mapperScannerConfigurer/mybatis-config.xml"/>
         </bean>
 
-        <bean id="customerDao" class="com.yyf.mybatisPlusSpring.mapperScannerConfigurer.DAO.B_CustomerDao">
-            <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+        <bean id="customerDao" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.yyf.mybatisPlusSpring.mapperScannerConfigurer.mapper"/>
         </bean>
 </beans>
